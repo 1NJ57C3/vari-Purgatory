@@ -399,7 +399,7 @@ while running:
             running = False
 
         case "save":
-            save_game()
+            save_game(current_room, inventory)
             running = False
 
         case "quit":
