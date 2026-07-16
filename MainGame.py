@@ -1,7 +1,6 @@
 import random
 import time
 import psutil
-import os
 
 from data.rooms import rooms
 from data.items import church_have_items, redchapel_have_items, whitechapel_have_items, blackchapel_have_items
