@@ -9,6 +9,7 @@ from data.knowings import shortest_knowing, technical_shortest, longest_knowing
 
 from utils.help import print_instructions
 from utils.load import load_game
+from utils.save import save_game
 
 def get_next_action(sequence):
     if sequence:
@@ -19,16 +20,6 @@ def get_next_action(sequence):
 
 current_room = 0
 inventory = []
-
-
-def create_save():
-    save_file_name = input("What is the name of your saved file? ")
-    save_file = open(save_file_name + ".txt", "w")
-    save_file.write(str(current_room) + "\n")
-    for i in range(len(inventory)):
-        save_file.write(inventory[i] + "\n")
-    print("Save file: '", save_file_name, "' successfully created.")
-    save_file.close()
 
 
 def getDesc(room):
@@ -409,7 +400,7 @@ while running:
             running = False
 
         case "save":
-            create_save()
+            save_game()
             running = False
 
         case "quit":
